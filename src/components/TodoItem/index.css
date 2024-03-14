@@ -1,0 +1,13 @@
+.but {
+  color: 'ff0b37';
+  outline: none;
+  cursor: 'pointer';
+}
+.para {
+  color: '000000';
+}
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
