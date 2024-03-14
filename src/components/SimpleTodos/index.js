@@ -1,4 +1,4 @@
-import Component from 'react'
+import {Component} from 'react'
 
 import TodoItem from '../TodoItem'
 
@@ -43,7 +43,7 @@ class SimpleTodos extends Component {
   state = {details: initialTodosList}
 
   butDlted = id => {
-    const {details} = this.props
+    const {details} = this.state
     const results = details.filter(e => e.id !== id)
     this.setState({details: results})
   }
@@ -54,7 +54,7 @@ class SimpleTodos extends Component {
         <div className="bg1">
           <h1>Simple Todos</h1>
           <ul className="ult">
-            {initialTodosList.map(each => (
+            {details.map(each => (
               <TodoItem key={each.id} val={each} dlt={this.butDlted} />
             ))}
           </ul>
